@@ -1,0 +1,253 @@
+/* Custom fonts */
+@font-face {
+  font-family: 'Europa-Light';
+  src: url('fonts/Europa-Light.eot');
+  src: url('fonts/Europa-Light.woff2') format('woff2'),
+       url('fonts/Europa-Light.woff') format('woff'),
+       url('fonts/Europa-Light.ttf') format('truetype'),
+       url('fonts/Europa-Light.svg#Europa-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font Awesome icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Europa-Light', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Header Mobile */
+
+#header-mobile {
+  display: none;
+}
+
+#header-mobile #mobile-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 78px;
+  z-index: 999999999;
+  padding: 20px;
+}
+
+#header-mobile .header-mobile__item-container {
+  display: none;
+}
+
+#mobile-navigation-label::before {
+  /* Adjust this to your desired icon font */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; /* Needed for Font Awesome */
+  content: "\f0c9"; /* Font Awesome hamburger icon */
+
+  /* Visual adjustments */
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between icon and text */
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px; /* Adjust icon size as needed */
+}
+
+#mobile-navigation-label {
+  /* Adjust your container styles as needed */
+  display: flex;
+  align-items: center;
+}
+
+/* Hide all submenus by default */
+#header-mobile #mobile-navigation .mobile-submenu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#header-mobile #mobile-navigation .submenu li {
+  margin: 5px 0;
+}
+
+/* Show submenu when checkbox is checked */
+#header-mobile #mobile-navigation toggle-menu:checked + .toggle-label + .mobile-submenu {
+  display: block;
+}
+
+/* General navigation styles */
+#header-mobile #mobile-navigation .header-mobile__item-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#header-mobile #mobile-navigation .menu__item {
+  margin-bottom: 10px;
+}
+
+#header-mobile #mobile-navigation .menu__item__link {
+  text-decoration: none;
+  color: #007bff;
+  display: block;
+  padding: 5px 10px;
+}
+
+#header-mobile #mobile-navigation .toggle-label {
+  cursor: pointer;
+  display: block;
+  padding: 5px 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+}
+
+
+/* Header desktop */
+
+#header-desktop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: 78px;
+  z-index: 999999999;
+  padding: 20px;
+}
+
+#header-desktop .desktop-navigation .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#header-desktop .submenu {
+  display: none;
+}
+
+#header-desktop .desktop-navigation .menu__item,
+#header-desktop .desktop-navigation .submenu__item {
+  list-style: none;
+  margin-right: 20px;
+}
+
+#header-desktop .desktop-navigation .menu__item a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#header-desktop .desktop-navigation .menu__item a:hover {
+  color: #f4f4f4;
+}
+
+#header-desktop .desktop-navigation .menu__item a.active {
+  color: #f4f4f4;
+}
+
+#header-desktop .desktop-navigation .separator {
+  font-family: 'Europa-Light', sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+#header-desktop .menu__item__link.has-subitems {
+  position: relative;
+
+}
+
+#header-desktop .submenu {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 300px;
+  background-color: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Home */
+
+/* Hero */
+.hero {
+  background: url('img/home-hero-background.webp') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero .hero__overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+
+}
+
+.hero .hero__heading {
+  font-size: 48px;
+  font-weight: 500;
+  color: #f4f4f4;
+  z-index: 999999;
+
+}
+
+.hero .hero__content {
+  z-index: 999999;
+}
+
+.hero .hero__subheading {
+  font-size: 24px;
+  font-weight: 300;
+  color: #f4f4f4;
+}
+
+.hero .hero__btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: #f4f4f4;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.hero .hero__btn:hover {
+  color: #f4f4f4;
+}
+
+
+/* Media queries */
+
+@media (max-width: 640px) {
+  
+  #header-mobile {
+    display: block;
+  }
+
+  #header-desktop {
+    display: none;
+  }
+
+}
