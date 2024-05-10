@@ -318,6 +318,28 @@ h1, h2, h3, h4, h5, h6, p, a, ul, li, span{
   z-index: 99999;
 }
 
+/* Section columns */
+.section-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.section-columns .home-section__column {
+  padding: 40px;
+}
+
+.home-section__button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: #f4f4f4;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #6b6969;
+  border-radius: 2px;
+}
 
 
 
